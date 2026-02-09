@@ -107,7 +107,7 @@ body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg)
 :root:not([data-theme="light"]) .hero-logo-dark{display:block;margin:0 auto}
 [data-theme="light"] .hero-logo-dark{display:none}
 .hero h1{position:relative;z-index:1;font-size:clamp(2.5rem,6vw,4rem);font-weight:900;letter-spacing:-0.03em;line-height:1.1;margin-bottom:16px}
-.hero h1 .glow{color:var(--primary);text-shadow:0 0 40px rgba(220,38,38,0.3)}
+.hero-inline-logo{height:clamp(2.5rem,6vw,4.2rem);width:auto;vertical-align:middle;margin-left:8px;position:relative;top:-2px}
 .hero-tagline{position:relative;z-index:1;font-size:1.15rem;color:var(--text-muted);max-width:700px;margin:0 auto 32px;line-height:1.6}
 .stats-bar{position:relative;z-index:1;display:flex;flex-wrap:wrap;justify-content:center;gap:24px;margin-bottom:32px}
 .stat{font-weight:700;font-size:1rem;color:var(--text)}
@@ -220,7 +220,7 @@ body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg)
 
 <section class="hero" id="top">
 <div class="hero-orb"></div>
-<h1>Awesome <span class="glow">OpenClaw</span></h1>
+<h1>Awesome <img src="https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/openclaw-logo-text.png" alt="OpenClaw" class="hero-inline-logo hero-logo-dark"><img src="https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/openclaw-logo-text-dark.png" alt="OpenClaw" class="hero-inline-logo hero-logo-light"></h1>
 <div class="stats-bar">
 <div class="stat">179K+<span>stars</span></div>
 <div class="stat">29.6K+<span>forks</span></div>
