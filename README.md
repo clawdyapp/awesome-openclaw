@@ -1214,6 +1214,7 @@ node --version                     # Must be 22+
 | [BlockRunAI/ClawRouter](https://github.com/BlockRunAI/ClawRouter) | Smart LLM router (save 78% on costs) |
 | [langbot-app/LangBot](https://github.com/langbot-app/LangBot) | Multi-platform IM bot with OpenClaw |
 | [kiankyars/openclawcourse](https://github.com/kiankyars/openclawcourse) | 1-hour crash course |
+| [memovai/mimiclaw](https://github.com/memovai/mimiclaw) | The world's first OpenClaw on a $5 ESP32-S3 chip — pure C, no Linux, Telegram integration |
 
 ---
 
