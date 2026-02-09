@@ -1089,7 +1089,11 @@ Capabilities: CDP, ARIA snapshots, screenshots, tab management, click/type/drag,
 
 | Title | Platform | Duration | Topics |
 |-------|----------|----------|--------|
-| **OpenClaw Full Tutorial for Beginners** | freeCodeCamp (YouTube) | Long | Installation, models, memory, Docker, skills |
+| **OpenClaw Full Tutorial for Beginners** | [freeCodeCamp (YouTube)](https://www.youtube.com/watch?v=n1sfrc-RjyM) | Long | Installation, models, memory, Docker, skills |
+| **The Wild Rise of OpenClaw** | [Fireship (YouTube)](https://www.youtube.com/watch?v=ssYt09bCgUY) | Short | History, architecture, why it matters |
+| **ClawdBot Is the Most Powerful AI Tool** | [Alex Finn (YouTube)](https://www.youtube.com/watch?v=Qkqe-uRhQJE) | Medium | ClawdBot deep dive, real-world demos |
+| **How to Setup OpenClaw in 5 Minutes** | [Julian Goldie (YouTube)](https://www.youtube.com/watch?v=1luvvYcpSJ8) | 5 min | Quick start, beginner-friendly |
+| **OpenClaw/ClawdBot Masterclass** | [Akshay Pachaar (Blog)](https://blog.dailydoseofds.com) | Long | In-depth technical guide, advanced usage |
 | **Master OpenClaw in 30 Minutes** | Creator Economy (YouTube) | 30 min | Safe setup, 5 real use cases, memory |
 | **How OpenClaw's Creator Uses AI** | Creator Economy | 1 hour | Full demo with Peter Steinberger |
 | **OpenClaw Google Workspace Setup** | YouTube | Medium | Gmail, Calendar, Drive integration |
