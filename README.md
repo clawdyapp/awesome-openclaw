@@ -176,18 +176,18 @@ That's it. The wizard walks you through API key setup, channel configuration, an
 
 | Method | Time | Difficulty | Best For |
 |--------|------|------------|----------|
-| **Agent37** | 30 sec | Easy | Cheapest managed ($0.99/mo) |
-| **SimpleClaw** | 1 min | Easy | Non-technical users |
-| **npm install** | 1 min | Easy | Developers with Node.js |
-| **DigitalOcean 1-Click** | 2 min | Easy | Quick cloud deploy |
-| **Railway Template** | 2 min | Easy | PaaS users |
-| **Zeabur** | 1 min | Easy | Docker auto-deploy |
-| **Docker** | 5 min | Medium | Isolation & reproducibility |
-| **Cloudflare Workers** | 5 min | Medium | Serverless enthusiasts |
-| **xCloud Managed** | 5 min | None | Full managed hosting |
-| **Manual VPS** | 10 min | Medium | Full control |
-| **Raspberry Pi** | 10 min | Medium | Low-power, always-on |
-| **ESP32-S3 ([MimiClaw](https://github.com/memovai/mimiclaw))** | 10 min | Medium | Cheapest hardware ($5), pure C, no OS |
+| **[Agent37](https://www.agent37.com/openclaw)** | 30 sec | Easy | Cheapest managed ($0.99/mo) |
+| **[SimpleClaw](https://www.simpleclaw.com/)** | 1 min | Easy | Non-technical users |
+| **[npm install](https://docs.openclaw.ai/quickstart)** | 1 min | Easy | Developers with Node.js |
+| **[DigitalOcean 1-Click](https://marketplace.digitalocean.com/apps/openclaw)** | 2 min | Easy | Quick cloud deploy |
+| **[Railway Template](https://railway.com/deploy/openclaw)** | 2 min | Easy | PaaS users |
+| **[Zeabur](https://zeabur.com/templates/VTZ4FX)** | 1 min | Easy | Docker auto-deploy |
+| **[Docker](https://docs.openclaw.ai/docker)** | 5 min | Medium | Isolation & reproducibility |
+| **[Cloudflare Workers](https://docs.openclaw.ai/cloudflare)** | 5 min | Medium | Serverless enthusiasts |
+| **[xCloud Managed](https://xcloud.host/openclaw-hosting)** | 5 min | None | Full managed hosting |
+| **[Manual VPS](https://docs.openclaw.ai/vps)** | 10 min | Medium | Full control |
+| **[Raspberry Pi](https://docs.openclaw.ai/raspberry-pi)** | 10 min | Medium | Low-power, always-on |
+| **[ESP32-S3 (MimiClaw)](https://github.com/memovai/mimiclaw)** | 10 min | Medium | Cheapest hardware ($5), pure C, no OS |
 
 ### Method 1: Official Installer Script
 
@@ -234,58 +234,58 @@ cd openclaw
 
 | Provider | Free Resources | Limits | Permanent? | Setup Time | Best For |
 |----------|---------------|--------|------------|------------|----------|
-| **Oracle Cloud** | 4 ARM CPUs, 24 GB RAM, 200 GB storage, 10 TB/mo | ARM architecture only | Yes (forever) | ~3 hours | Power users wanting $0 hosting |
-| **AMD Developer Cloud** | MI300X GPU (192 GB memory), $100 credits | ~50 hours compute | No (credits) | 30 min | GPU-accelerated local LLMs |
-| **Google Cloud Run** | 180K vCPU-sec, 360K GiB-sec, 2M requests/mo | Cold starts, stateless | Yes | 30 min | Serverless testing |
-| **Azure Container Apps** | 180K vCPU-sec, 360K GiB-sec, 2M requests/mo | Cold starts | Yes | 30 min | Enterprise users |
-| **Render** | Web service (spins down after 15 min) | Slow wake-up (~60s) | Yes | 5 min | Testing only |
-| **AWS Free Tier** | t2.micro (1 vCPU, 1 GB RAM) | 12 months only | No (12 mo) | 15 min | AWS-familiar users |
-| **Railway** | $5 one-time credit | 30 days trial | No | 2 min | Quick testing |
+| **[Oracle Cloud](https://www.oracle.com/cloud/free/)** | 4 ARM CPUs, 24 GB RAM, 200 GB storage, 10 TB/mo | ARM architecture only | Yes (forever) | ~3 hours | Power users wanting $0 hosting |
+| **[AMD Developer Cloud](https://www.amd.com/en/developer/resources/cloud-access.html)** | MI300X GPU (192 GB memory), $100 credits | ~50 hours compute | No (credits) | 30 min | GPU-accelerated local LLMs |
+| **[Google Cloud Run](https://cloud.google.com/run)** | 180K vCPU-sec, 360K GiB-sec, 2M requests/mo | Cold starts, stateless | Yes | 30 min | Serverless testing |
+| **[Azure Container Apps](https://azure.microsoft.com/en-us/products/container-apps)** | 180K vCPU-sec, 360K GiB-sec, 2M requests/mo | Cold starts | Yes | 30 min | Enterprise users |
+| **[Render](https://render.com/)** | Web service (spins down after 15 min) | Slow wake-up (~60s) | Yes | 5 min | Testing only |
+| **[AWS Free Tier](https://aws.amazon.com/free/)** | t2.micro (1 vCPU, 1 GB RAM) | 12 months only | No (12 mo) | 15 min | AWS-familiar users |
+| **[Railway](https://railway.com/deploy/openclaw)** | $5 one-time credit | 30 days trial | No | 2 min | Quick testing |
 
 ### Budget VPS ($2-8/month)
 
 | Provider | Plan | Price/mo | vCPU | RAM | Storage | Bandwidth | Region |
 |----------|------|----------|------|-----|---------|-----------|--------|
-| **LumaDock** | Basic | $1.99 | 1 | 1 GB | 20 GB SSD | 1 TB | US/EU |
-| **Vultr** | Regular Cloud | $2.50 | 1 | 512 MB | 10 GB | 0.5 TB | 32 locations |
-| **Vultr** | Standard | $3.50 | 1 | 1 GB | 25 GB NVMe | 1 TB | 32 locations |
-| **Hetzner** | CX22 | €3.79 (~$4.15) | 2 | 4 GB | 40 GB SSD | 20 TB | EU (DE/FI) |
-| **Alibaba Cloud** | Simple App Server | $4 | 1 | 1 GB | Varies | Varies | 19 regions |
-| **Contabo** | Cloud VPS S | $4.95 | 4 | 8 GB | 50 GB SSD | Unlimited | US/EU/Asia |
-| **Hostinger** | KVM 1 | $4.99 | 1 | 4 GB | 50 GB NVMe | 4 TB | Global |
-| **Linode** | Shared 1GB | $5 | 1 | 1 GB | 25 GB | 1 TB | Global |
-| **Vultr** | High-Performance | $6 | 1 | 1 GB | 25 GB NVMe | 2 TB | 32 locations |
-| **DigitalOcean** | Basic Droplet | $6 | 1 | 1 GB | 25 GB | 1 TB | Global |
-| **Hetzner** | CX32 | €6.80 (~$7.45) | 4 | 8 GB | 80 GB SSD | 20 TB | EU (DE/FI) |
-| **Contabo** | Cloud VPS M | $7.95 | 4 | 8 GB | 200 GB SSD | Unlimited | US/EU/Asia |
-| **Kamatera** | Custom | $4+ | Custom | Custom | Custom | Pay-as-you-go | Global |
-| **Zap-Hosting** | VPS | Varies | Varies | Varies | Varies | Varies | EU |
-| **BoostedHost** | OpenClaw VPS | Varies | Varies | Varies | Varies | Varies | Global |
+| **[LumaDock](https://lumadock.com/)** | Basic | $1.99 | 1 | 1 GB | 20 GB SSD | 1 TB | US/EU |
+| **[Vultr](https://www.vultr.com/)** | Regular Cloud | $2.50 | 1 | 512 MB | 10 GB | 0.5 TB | 32 locations |
+| **[Vultr](https://www.vultr.com/)** | Standard | $3.50 | 1 | 1 GB | 25 GB NVMe | 1 TB | 32 locations |
+| **[Hetzner](https://www.hetzner.com/cloud/)** | CX22 | €3.79 (~$4.15) | 2 | 4 GB | 40 GB SSD | 20 TB | EU (DE/FI) |
+| **[Alibaba Cloud](https://www.alibabacloud.com/en/campaign/ai-openclaw)** | Simple App Server | $4 | 1 | 1 GB | Varies | Varies | 19 regions |
+| **[Contabo](https://contabo.com/en/openclaw-hosting/)** | Cloud VPS S | $4.95 | 4 | 8 GB | 50 GB SSD | Unlimited | US/EU/Asia |
+| **[Hostinger](https://www.hostinger.com/uk/vps/docker/openclaw)** | KVM 1 | $4.99 | 1 | 4 GB | 50 GB NVMe | 4 TB | Global |
+| **[Linode](https://www.linode.com/)** | Shared 1GB | $5 | 1 | 1 GB | 25 GB | 1 TB | Global |
+| **[Vultr](https://www.vultr.com/)** | High-Performance | $6 | 1 | 1 GB | 25 GB NVMe | 2 TB | 32 locations |
+| **[DigitalOcean](https://marketplace.digitalocean.com/apps/openclaw)** | Basic Droplet | $6 | 1 | 1 GB | 25 GB | 1 TB | Global |
+| **[Hetzner](https://www.hetzner.com/cloud/)** | CX32 | €6.80 (~$7.45) | 4 | 8 GB | 80 GB SSD | 20 TB | EU (DE/FI) |
+| **[Contabo](https://contabo.com/en/openclaw-hosting/)** | Cloud VPS M | $7.95 | 4 | 8 GB | 200 GB SSD | Unlimited | US/EU/Asia |
+| **[Kamatera](https://www.kamatera.com/)** | Custom | $4+ | Custom | Custom | Custom | Pay-as-you-go | Global |
+| **[Zap-Hosting](https://zap-hosting.com/)** | VPS | Varies | Varies | Varies | Varies | Varies | EU |
+| **[BoostedHost](https://boostedhost.com/)** | OpenClaw VPS | Varies | Varies | Varies | Varies | Varies | Global |
 
 ### Mid-Range ($5-25/month)
 
 | Provider | Plan | Price/mo | vCPU | RAM | Storage | Notes |
 |----------|------|----------|------|-----|---------|-------|
-| **DigitalOcean** | Premium Droplet | $7 | 1 | 1 GB | 25 GB NVMe | 1-Click Deploy available |
-| **DigitalOcean** | Standard 2GB | $12 | 1 | 2 GB | 50 GB | Recommended for OpenClaw |
-| **Hostinger** | KVM 2 | $6.99 | 2 | 8 GB | 100 GB NVMe | Best Hostinger value |
-| **GCP** | e2-medium | ~$12 | 2 | 4 GB | 30 GB SSD | $300 free credit (90 days) |
-| **Azure** | B1ms VM | ~$15 | 1 | 2 GB | 32 GB | Enterprise compliance |
-| **Linode** | Dedicated 4GB | $36 | 2 (dedicated) | 4 GB | 40 GB | Consistent performance |
+| **[DigitalOcean](https://marketplace.digitalocean.com/apps/openclaw)** | Premium Droplet | $7 | 1 | 1 GB | 25 GB NVMe | 1-Click Deploy available |
+| **[DigitalOcean](https://marketplace.digitalocean.com/apps/openclaw)** | Standard 2GB | $12 | 1 | 2 GB | 50 GB | Recommended for OpenClaw |
+| **[Hostinger](https://www.hostinger.com/uk/vps/docker/openclaw)** | KVM 2 | $6.99 | 2 | 8 GB | 100 GB NVMe | Best Hostinger value |
+| **[GCP](https://cloud.google.com/compute)** | e2-medium | ~$12 | 2 | 4 GB | 30 GB SSD | $300 free credit (90 days) |
+| **[Azure](https://azure.microsoft.com/en-us/products/virtual-machines)** | B1ms VM | ~$15 | 1 | 2 GB | 32 GB | Enterprise compliance |
+| **[Linode](https://www.linode.com/)** | Dedicated 4GB | $36 | 2 (dedicated) | 4 GB | 40 GB | Consistent performance |
 
 ### Serverless & PaaS
 
 | Platform | Starting Price | Free Tier? | Persistent Storage | Auto-Scale | Notes |
 |----------|---------------|------------|-------------------|------------|-------|
-| **Cloudflare Workers** | $5/mo (paid plan) | 100K req/day (free) | R2 ($0.015/GB/mo) | Yes | Moltworker PoC |
-| **Railway** | $5/mo (Hobby) | $5 credit trial | Yes (volumes) | Yes | Best PaaS UX |
-| **Render** | $7/mo (web service) | Free w/ limits | Yes (disks) | Yes | YAML IaC |
-| **Fly.io** | Pay-as-you-go | None | Yes (volumes) | Yes | Global edge |
-| **AWS Lightsail** | $3.50/mo | None | Yes | No | Simple AWS VPS |
-| **Northflank** | Varies | Limited | Yes | Yes | Stack templates |
-| **Zeabur** | Varies | Limited | Yes | Yes | One-click Docker |
-| **Elestio** | Varies | None | Yes | Yes | Fully managed open source |
-| **Coolify** | Self-hosted | Free (self-host) | Yes | No | Open-source PaaS |
+| **[Cloudflare Workers](https://workers.cloudflare.com/)** | $5/mo (paid plan) | 100K req/day (free) | R2 ($0.015/GB/mo) | Yes | Moltworker PoC |
+| **[Railway](https://railway.com/deploy/openclaw)** | $5/mo (Hobby) | $5 credit trial | Yes (volumes) | Yes | Best PaaS UX |
+| **[Render](https://render.com/)** | $7/mo (web service) | Free w/ limits | Yes (disks) | Yes | YAML IaC |
+| **[Fly.io](https://fly.io/)** | Pay-as-you-go | None | Yes (volumes) | Yes | Global edge |
+| **[AWS Lightsail](https://aws.amazon.com/lightsail/)** | $3.50/mo | None | Yes | No | Simple AWS VPS |
+| **[Northflank](https://northflank.com/stacks/deploy-openclaw)** | Varies | Limited | Yes | Yes | Stack templates |
+| **[Zeabur](https://zeabur.com/templates/VTZ4FX)** | Varies | Limited | Yes | Yes | One-click Docker |
+| **[Elestio](https://elest.io/open-source/openclaw)** | Varies | None | Yes | Yes | Fully managed open source |
+| **[Coolify](https://github.com/essamamdani/openclaw-coolify)** | Self-hosted | Free (self-host) | Yes | No | Open-source PaaS |
 
 ### Managed Hosting Services
 
@@ -331,25 +331,25 @@ Hire someone to set it up for you.
 
 | Provider | Monthly Cost | Setup Time | Difficulty | 1-Click? | Best For |
 |----------|-------------|------------|------------|----------|----------|
-| Oracle Cloud | **$0** | 3 hours | Hard | No | Free-forever hosting |
-| AMD Dev Cloud | **$0** (credits) | 30 min | Medium | No | Free GPU inference |
-| Agent37 | **$0.99** | 30 sec | **None** | **Yes** | Cheapest managed |
-| LumaDock | **$1.99** | 15 min | Medium | No | Cheapest VPS |
-| Vultr | **$2.50** | 10 min | Medium | Yes | Global presence |
-| Hetzner CX22 | **$4.15** | 10 min | Medium | No | Best price/performance |
-| Contabo VPS S | **$4.95** | 15 min | Medium | No | Unlimited bandwidth |
-| Hostinger KVM 1 | **$4.99** | 10 min | Easy | Yes | Docker templates |
-| Cloudflare Workers | **$5** | 5 min | Medium | No | Serverless |
-| Railway Hobby | **$5** | 2 min | Easy | Yes | Best PaaS experience |
-| Linode 1GB | **$5** | 10 min | Medium | No | Consistent performance |
-| DigitalOcean | **$6** | 2 min | Easy | **Yes** | Best docs + 1-Click |
-| Render | **$7** | 5 min | Easy | Yes | YAML Infrastructure |
-| MyClaw.ai Lite | **$9** | Instant | **None** | **Yes** | Budget managed |
-| DigitalOcean 2GB | **$12** | 2 min | Easy | **Yes** | Recommended production |
-| xCloud Managed | **$24** | 5 min | **None** | **Yes** | Full managed hosting |
-| ClawCloud Starter | **$29** | < 1 min | **None** | **Yes** | Premium managed |
-| Raspberry Pi 5 | **$0**/mo | 30 min | Medium | No | Low-power, always-on |
-| ESP32-S3 (MimiClaw) | **$0**/mo | 10 min | Medium | No | Cheapest ($5 chip), no OS |
+| [Oracle Cloud](https://www.oracle.com/cloud/free/) | **$0** | 3 hours | Hard | No | Free-forever hosting |
+| [AMD Dev Cloud](https://www.amd.com/en/developer/resources/cloud-access.html) | **$0** (credits) | 30 min | Medium | No | Free GPU inference |
+| [Agent37](https://www.agent37.com/openclaw) | **$0.99** | 30 sec | **None** | **Yes** | Cheapest managed |
+| [LumaDock](https://lumadock.com/) | **$1.99** | 15 min | Medium | No | Cheapest VPS |
+| [Vultr](https://www.vultr.com/) | **$2.50** | 10 min | Medium | Yes | Global presence |
+| [Hetzner CX22](https://www.hetzner.com/cloud/) | **$4.15** | 10 min | Medium | No | Best price/performance |
+| [Contabo VPS S](https://contabo.com/en/openclaw-hosting/) | **$4.95** | 15 min | Medium | No | Unlimited bandwidth |
+| [Hostinger KVM 1](https://www.hostinger.com/uk/vps/docker/openclaw) | **$4.99** | 10 min | Easy | Yes | Docker templates |
+| [Cloudflare Workers](https://workers.cloudflare.com/) | **$5** | 5 min | Medium | No | Serverless |
+| [Railway Hobby](https://railway.com/deploy/openclaw) | **$5** | 2 min | Easy | Yes | Best PaaS experience |
+| [Linode 1GB](https://www.linode.com/) | **$5** | 10 min | Medium | No | Consistent performance |
+| [DigitalOcean](https://marketplace.digitalocean.com/apps/openclaw) | **$6** | 2 min | Easy | **Yes** | Best docs + 1-Click |
+| [Render](https://render.com/) | **$7** | 5 min | Easy | Yes | YAML Infrastructure |
+| [MyClaw.ai Lite](https://myclaw.ai/pricing) | **$9** | Instant | **None** | **Yes** | Budget managed |
+| [DigitalOcean 2GB](https://marketplace.digitalocean.com/apps/openclaw) | **$12** | 2 min | Easy | **Yes** | Recommended production |
+| [xCloud Managed](https://xcloud.host/openclaw-hosting) | **$24** | 5 min | **None** | **Yes** | Full managed hosting |
+| [ClawCloud Starter](https://www.clawcloud.sh/) | **$29** | < 1 min | **None** | **Yes** | Premium managed |
+| [Raspberry Pi 5](https://docs.openclaw.ai/raspberry-pi) | **$0**/mo | 30 min | Medium | No | Low-power, always-on |
+| [ESP32-S3 (MimiClaw)](https://github.com/memovai/mimiclaw) | **$0**/mo | 10 min | Medium | No | Cheapest ($5 chip), no OS |
 | Mac Mini | **$0**/mo | 10 min | Easy | No | Privacy-first, local |
 
 ---
@@ -362,18 +362,18 @@ The **real cost** of running OpenClaw is the AI model API, not infrastructure.
 
 | Provider | Model | Input Cost | Output Cost | Notes |
 |----------|-------|-----------|-------------|-------|
-| **Anthropic** | Claude 3.5 Haiku | $0.80 | $4.00 | Best budget option |
-| **Anthropic** | Claude 3.5 Sonnet | $3.00 | $15.00 | Best balance |
-| **Anthropic** | Claude Opus 4.5 | $15.00 | $75.00 | Most capable, expensive |
-| **OpenAI** | GPT-4o | $2.50 | $10.00 | Good alternative |
-| **OpenAI** | GPT-4o-mini | $0.15 | $0.60 | Very cheap |
-| **Google** | Gemini 2.0 Flash | $0.10 | $0.40 | Cheapest hosted |
-| **Google** | Gemini Flash-Lite | **Free tier** | **Free tier** | Zero cost option |
-| **DeepSeek** | DeepSeek V3 | $0.27 | $1.10 | Best value reasoning |
-| **Moonshot** | Kimi K2.5 | $3.00 | $3.00 | Great agentic performance |
-| **Grok** | Grok 4.1 mini | $0.20 | $0.50 | Budget alternative |
-| **OpenRouter** | Various | Varies | Varies | Unified API for 200+ models |
-| **Ollama/Local** | Any | **$0** | **$0** | Requires hardware (16 GB+ RAM) |
+| **[Anthropic](https://console.anthropic.com/)** | Claude 3.5 Haiku | $0.80 | $4.00 | Best budget option |
+| **[Anthropic](https://console.anthropic.com/)** | Claude 3.5 Sonnet | $3.00 | $15.00 | Best balance |
+| **[Anthropic](https://console.anthropic.com/)** | Claude Opus 4.5 | $15.00 | $75.00 | Most capable, expensive |
+| **[OpenAI](https://platform.openai.com/)** | GPT-4o | $2.50 | $10.00 | Good alternative |
+| **[OpenAI](https://platform.openai.com/)** | GPT-4o-mini | $0.15 | $0.60 | Very cheap |
+| **[Google](https://aistudio.google.dev/)** | Gemini 2.0 Flash | $0.10 | $0.40 | Cheapest hosted |
+| **[Google](https://aistudio.google.dev/)** | Gemini Flash-Lite | **Free tier** | **Free tier** | Zero cost option |
+| **[DeepSeek](https://platform.deepseek.com/)** | DeepSeek V3 | $0.27 | $1.10 | Best value reasoning |
+| **[Moonshot](https://platform.moonshot.cn/)** | Kimi K2.5 | $3.00 | $3.00 | Great agentic performance |
+| **[Grok](https://console.x.ai/)** | Grok 4.1 mini | $0.20 | $0.50 | Budget alternative |
+| **[OpenRouter](https://openrouter.ai/)** | Various | Varies | Varies | Unified API for 200+ models |
+| **[Ollama](https://ollama.com/)** | Any | **$0** | **$0** | Requires hardware (16 GB+ RAM) |
 
 > **75x price difference** between the most expensive (Claude Opus) and cheapest (Gemini Flash) options.
 
