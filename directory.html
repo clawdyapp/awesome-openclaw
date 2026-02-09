@@ -71,7 +71,7 @@ body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg)
 .hero h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:900;letter-spacing:-0.03em;line-height:1.15;margin-bottom:16px;position:relative}
 .hero h1 .hl{color:var(--primary)}
 .hero p{color:var(--text-muted);font-size:1.1rem;max-width:600px;margin:0 auto 32px}
-.hero-stats{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;margin-bottom:24px}
+.hero-stats{display:grid;grid-template-columns:repeat(4,auto);justify-content:center;gap:8px 32px;margin-bottom:24px}
 .hero-stat{text-align:center}
 .hero-stat .val{font-size:1.5rem;font-weight:800;color:var(--text)}
 .hero-stat .lbl{font-size:.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em;font-weight:500}
@@ -119,8 +119,11 @@ body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg)
 .hero{padding:60px 16px 32px}
 .hero h1{font-size:1.8rem}
 .hero p{font-size:.95rem;padding:0 8px}
-.hero-stats{gap:16px}
-.hero-stat .val{font-size:1.2rem}
+.hero-stats{grid-template-columns:repeat(2,auto);gap:8px 28px}
+.hero-stat .val{font-size:1.1rem}
+.hero-stat .lbl{font-size:.65rem}
+.hero p{font-size:.9rem;padding:0 8px}
+.hero-badge{font-size:.75rem;padding:4px 12px}
 .nav-links{display:none}
 .nav-inner{padding:0 12px}
 .gh-link span{display:none}
@@ -129,7 +132,9 @@ body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg)
 .section-title{font-size:1.2rem;padding:32px 16px 16px}
 .filters{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:0 16px 16px}
 .filters::-webkit-scrollbar{display:none}
+.filter-btn{padding:6px 14px;font-size:.8rem;white-space:nowrap}
 .card{padding:18px}
+.card-desc{font-size:.85rem}
 }
 
 @keyframes fadeInUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
@@ -1152,15 +1157,24 @@ localStorage.setItem('theme',isLight?'dark':'light');
 
 const filterBtns=$$('.filter-btn');
 const cards=$$('.card');
+const sectionTitles=$$('.section-title');
 filterBtns.forEach(btn=>{
 btn.addEventListener('click',()=>{
 filterBtns.forEach(b=>b.classList.remove('active'));
 btn.classList.add('active');
 const f=btn.dataset.filter;
-cards.forEach((card,i)=>{
+let visIdx=0;
+cards.forEach(card=>{
 const show=f==='all'||card.dataset.cat===f;
 card.style.display=show?'':'none';
-if(show){card.style.animation='none';card.offsetHeight;card.style.animation=`fadeInUp .4s ease ${i*0.03}s both`}
+if(show){card.style.animation='none';card.offsetHeight;card.style.animation=`fadeInUp .4s ease ${visIdx*0.03}s both`;visIdx++}
+});
+sectionTitles.forEach(title=>{
+const grid=title.nextElementSibling;
+if(!grid||!grid.classList.contains('grid')){title.style.display=f==='all'?'':'none';return}
+const hasVisible=[...grid.querySelectorAll('.card')].some(c=>c.style.display!=='none');
+title.style.display=hasVisible?'':'none';
+grid.style.display=hasVisible?'':'none';
 });
 });
 });
