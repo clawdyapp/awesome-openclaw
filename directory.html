@@ -115,12 +115,21 @@ body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg)
 .back-link:hover{color:var(--text);border-color:var(--primary)}
 
 @media(max-width:768px){
-.grid{grid-template-columns:1fr}
-.hero h1{font-size:2rem}
-.hero-stats{gap:20px}
+.grid{grid-template-columns:1fr;gap:14px}
+.hero{padding:60px 16px 32px}
+.hero h1{font-size:1.8rem}
+.hero p{font-size:.95rem;padding:0 8px}
+.hero-stats{gap:16px}
+.hero-stat .val{font-size:1.2rem}
 .nav-links{display:none}
-.filters{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding-bottom:16px}
+.nav-inner{padding:0 12px}
+.gh-link span{display:none}
+.gh-link{padding:5px 10px}
+.theme-toggle{width:32px;height:32px;font-size:1rem}
+.section-title{font-size:1.2rem;padding:32px 16px 16px}
+.filters{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:0 16px 16px}
 .filters::-webkit-scrollbar{display:none}
+.card{padding:18px}
 }
 
 @keyframes fadeInUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
@@ -277,7 +286,9 @@ body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg)
 </div>
 </div>
 
+</div>
 <h2 class="section-title" id="social-ai">Social & AI Platforms</h2>
+<div class="grid">
 
 <div class="card" data-cat="memory" data-tier="a" style="animation-delay:.3s">
 <div class="card-tier a">A</div>
@@ -347,7 +358,9 @@ body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg)
 </div>
 </div>
 
+</div>
 <h2 class="section-title" id="devtools">Developer Tools</h2>
+<div class="grid">
 
 <div class="card" data-cat="devtools" data-tier="a" style="animation-delay:.5s">
 <div class="card-tier a">A</div>
@@ -468,7 +481,9 @@ body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg)
 </div>
 </div>
 
+</div>
 <h2 class="section-title" id="automation">Automation & Workflows</h2>
+<div class="grid">
 
 <div class="card" data-cat="automation" data-tier="a" style="animation-delay:.85s">
 <div class="card-tier a">A</div>
@@ -599,7 +614,9 @@ body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg)
 </div>
 </div>
 
-<h2 class="section-title" id="defi">DeFi & Crypto</h2>
+</div>
+<h2 class="section-title" id="defi">DeFi &amp; Crypto</h2>
+<div class="grid">
 
 <div class="card" data-cat="defi" data-tier="a" style="animation-delay:1.25s">
 <div class="card-tier a">A</div>
@@ -700,7 +717,9 @@ body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg)
 </div>
 </div>
 
-<h2 class="section-title" id="hardware">Hardware & Smart Home</h2>
+</div>
+<h2 class="section-title" id="hardware">Hardware &amp; Smart Home</h2>
+<div class="grid">
 
 <div class="card" data-cat="hardware" data-tier="a" style="animation-delay:1.5s">
 <div class="card-tier a">A</div>
@@ -849,7 +868,9 @@ body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg)
 </div>
 </div>
 
-<h2 class="section-title" id="voice-section">Voice & Phone</h2>
+</div>
+<h2 class="section-title" id="voice-section">Voice &amp; Phone</h2>
+<div class="grid">
 
 <div class="card" data-cat="voice" data-tier="a" style="animation-delay:1.75s">
 <div class="card-tier a">A</div>
@@ -901,7 +922,9 @@ body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg)
 </div>
 </div>
 
-<h2 class="section-title" id="knowledge-section">Memory & Knowledge</h2>
+</div>
+<h2 class="section-title" id="knowledge-section">Memory &amp; Knowledge</h2>
+<div class="grid">
 
 <div class="card" data-cat="memory" data-tier="b" style="animation-delay:1.9s">
 <div class="card-tier b">B</div>
@@ -969,7 +992,9 @@ body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg)
 </div>
 </div>
 
-<h2 class="section-title" id="infra-section">Infrastructure & Deployment</h2>
+</div>
+<h2 class="section-title" id="infra-section">Infrastructure &amp; Deployment</h2>
+<div class="grid">
 
 <div class="card" data-cat="infra" data-tier="b" style="animation-delay:2.1s">
 <div class="card-tier b">B</div>
