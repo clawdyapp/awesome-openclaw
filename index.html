@@ -131,6 +131,8 @@ body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg)
 .content blockquote strong{color:var(--text)}
 .content img{max-width:100%;height:auto;border-radius:8px;margin:16px 0}
 .content hr{border:none;height:1px;background:var(--card-border);margin:48px 0}
+.provider-logo{width:18px;height:18px;vertical-align:middle;margin-right:6px;border-radius:3px;display:inline-block;object-fit:contain}
+[data-theme="light"] .provider-logo.si-icon{filter:brightness(0.2)}
 .severity-critical{display:inline-block;padding:2px 8px;border-radius:4px;background:var(--critical-bg);color:#EF4444;font-weight:600;font-size:.8rem;border:1px solid var(--critical-border)}
 .severity-high{display:inline-block;padding:2px 8px;border-radius:4px;background:var(--warning-bg);color:#F59E0B;font-weight:600;font-size:.8rem;border:1px solid var(--warning-border)}
 .footer{text-align:center;padding:48px 24px;border-top:1px solid var(--card-border);color:var(--text-muted);font-size:.85rem}
@@ -312,15 +314,15 @@ cd openclaw
 ./docker-setup.sh</code></pre>
 <h3>Method 4: One-Click Cloud Deploys</h3>
 <div class="table-wrap"><table><thead><tr><th>Platform</th><th>Link</th><th>Notes</th></tr></thead><tbody>
-<tr><td><strong>DigitalOcean</strong></td><td><a href="https://marketplace.digitalocean.com/apps/openclaw">1-Click Deploy</a></td><td>Security-hardened, pre-configured</td></tr>
-<tr><td><strong>Railway</strong></td><td><a href="https://railway.com/deploy/openclaw">Template</a></td><td>Web-based /setup wizard</td></tr>
-<tr><td><strong>Render</strong></td><td><a href="https://docs.openclaw.ai/render">render.yaml</a></td><td>Infrastructure as Code</td></tr>
-<tr><td><strong>SimpleClaw</strong></td><td><a href="https://www.simpleclaw.com/">simpleclaw.com</a></td><td>Deploy in under 1 minute</td></tr>
-<tr><td><strong>Zeabur</strong></td><td><a href="https://zeabur.com/templates/VTZ4FX">Template</a></td><td>One-click Docker deploy</td></tr>
-<tr><td><strong>Northflank</strong></td><td><a href="https://northflank.com/stacks/deploy-openclaw">Stack</a></td><td>No server-side terminal needed</td></tr>
-<tr><td><strong>Lightning.AI</strong></td><td><a href="https://lightning.ai/lightning-ai/environments/openclaw">Environment</a></td><td>Browser-based, no local hardware</td></tr>
-<tr><td><strong>Coolify</strong></td><td><a href="https://github.com/essamamdani/openclaw-coolify">Template</a></td><td>Self-hosted PaaS template</td></tr>
-<tr><td><strong>Elestio</strong></td><td><a href="https://elest.io/open-source/openclaw">Open Source</a></td><td>Fully managed in &lt; 3 min</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/digitalocean" alt="" class="provider-logo si-icon"><strong>DigitalOcean</strong></td><td><a href="https://marketplace.digitalocean.com/apps/openclaw">1-Click Deploy</a></td><td>Security-hardened, pre-configured</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/railway" alt="" class="provider-logo si-icon"><strong>Railway</strong></td><td><a href="https://railway.com/deploy/openclaw">Template</a></td><td>Web-based /setup wizard</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/render" alt="" class="provider-logo si-icon"><strong>Render</strong></td><td><a href="https://docs.openclaw.ai/render">render.yaml</a></td><td>Infrastructure as Code</td></tr>
+<tr><td><img src="https://www.google.com/s2/favicons?domain=simpleclaw.com&sz=32" alt="" class="provider-logo"><strong>SimpleClaw</strong></td><td><a href="https://www.simpleclaw.com/">simpleclaw.com</a></td><td>Deploy in under 1 minute</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/zeabur" alt="" class="provider-logo si-icon"><strong>Zeabur</strong></td><td><a href="https://zeabur.com/templates/VTZ4FX">Template</a></td><td>One-click Docker deploy</td></tr>
+<tr><td><img src="https://www.google.com/s2/favicons?domain=northflank.com&sz=32" alt="" class="provider-logo"><strong>Northflank</strong></td><td><a href="https://northflank.com/stacks/deploy-openclaw">Stack</a></td><td>No server-side terminal needed</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/lightning" alt="" class="provider-logo si-icon"><strong>Lightning.AI</strong></td><td><a href="https://lightning.ai/lightning-ai/environments/openclaw">Environment</a></td><td>Browser-based, no local hardware</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/coolify" alt="" class="provider-logo si-icon"><strong>Coolify</strong></td><td><a href="https://github.com/essamamdani/openclaw-coolify">Template</a></td><td>Self-hosted PaaS template</td></tr>
+<tr><td><img src="https://www.google.com/s2/favicons?domain=elest.io&sz=32" alt="" class="provider-logo"><strong>Elestio</strong></td><td><a href="https://elest.io/open-source/openclaw">Open Source</a></td><td>Fully managed in &lt; 3 min</td></tr>
 </tbody></table></div>
 </div>
 
@@ -330,48 +332,48 @@ cd openclaw
 
 <h3>Free Tier ($0/month)</h3>
 <div class="table-wrap"><table><thead><tr><th>Provider</th><th>Free Resources</th><th>Limits</th><th>Permanent?</th><th>Best For</th></tr></thead><tbody>
-<tr><td><strong>Oracle Cloud</strong></td><td>4 ARM CPUs, 24 GB RAM, 200 GB storage</td><td>ARM only</td><td>Yes (forever)</td><td>Power users wanting $0 hosting</td></tr>
-<tr><td><strong>AMD Developer Cloud</strong></td><td>MI300X GPU (192 GB), $100 credits</td><td>~50 hours</td><td>No (credits)</td><td>GPU-accelerated local LLMs</td></tr>
-<tr><td><strong>Google Cloud Run</strong></td><td>180K vCPU-sec, 2M req/mo</td><td>Cold starts</td><td>Yes</td><td>Serverless testing</td></tr>
-<tr><td><strong>Azure Container Apps</strong></td><td>180K vCPU-sec, 2M req/mo</td><td>Cold starts</td><td>Yes</td><td>Enterprise users</td></tr>
-<tr><td><strong>Render</strong></td><td>Web service (spins down after 15 min)</td><td>~60s wake</td><td>Yes</td><td>Testing only</td></tr>
-<tr><td><strong>AWS Free Tier</strong></td><td>t2.micro (1 vCPU, 1 GB RAM)</td><td>12 months</td><td>No</td><td>AWS-familiar users</td></tr>
-<tr><td><strong>Railway</strong></td><td>$5 one-time credit</td><td>30 days</td><td>No</td><td>Quick testing</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/oracle" alt="" class="provider-logo si-icon"><strong>Oracle Cloud</strong></td><td>4 ARM CPUs, 24 GB RAM, 200 GB storage</td><td>ARM only</td><td>Yes (forever)</td><td>Power users wanting $0 hosting</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/amd" alt="" class="provider-logo si-icon"><strong>AMD Developer Cloud</strong></td><td>MI300X GPU (192 GB), $100 credits</td><td>~50 hours</td><td>No (credits)</td><td>GPU-accelerated local LLMs</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/googlecloud" alt="" class="provider-logo si-icon"><strong>Google Cloud Run</strong></td><td>180K vCPU-sec, 2M req/mo</td><td>Cold starts</td><td>Yes</td><td>Serverless testing</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/microsoftazure" alt="" class="provider-logo si-icon"><strong>Azure Container Apps</strong></td><td>180K vCPU-sec, 2M req/mo</td><td>Cold starts</td><td>Yes</td><td>Enterprise users</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/render" alt="" class="provider-logo si-icon"><strong>Render</strong></td><td>Web service (spins down after 15 min)</td><td>~60s wake</td><td>Yes</td><td>Testing only</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/amazonaws" alt="" class="provider-logo si-icon"><strong>AWS Free Tier</strong></td><td>t2.micro (1 vCPU, 1 GB RAM)</td><td>12 months</td><td>No</td><td>AWS-familiar users</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/railway" alt="" class="provider-logo si-icon"><strong>Railway</strong></td><td>$5 one-time credit</td><td>30 days</td><td>No</td><td>Quick testing</td></tr>
 </tbody></table></div>
 
 <h3>Budget VPS ($2-8/month)</h3>
 <div class="table-wrap"><table><thead><tr><th>Provider</th><th>Plan</th><th>Price/mo</th><th>vCPU</th><th>RAM</th><th>Storage</th><th>Bandwidth</th></tr></thead><tbody>
-<tr><td><strong>LumaDock</strong></td><td>Basic</td><td>$1.99</td><td>1</td><td>1 GB</td><td>20 GB SSD</td><td>1 TB</td></tr>
-<tr><td><strong>Vultr</strong></td><td>Regular Cloud</td><td>$2.50</td><td>1</td><td>512 MB</td><td>10 GB</td><td>0.5 TB</td></tr>
-<tr><td><strong>Hetzner</strong></td><td>CX22</td><td>&euro;3.79 (~$4.15)</td><td>2</td><td>4 GB</td><td>40 GB SSD</td><td>20 TB</td></tr>
-<tr><td><strong>Contabo</strong></td><td>Cloud VPS S</td><td>$4.95</td><td>4</td><td>8 GB</td><td>50 GB SSD</td><td>Unlimited</td></tr>
-<tr><td><strong>Hostinger</strong></td><td>KVM 1</td><td>$4.99</td><td>1</td><td>4 GB</td><td>50 GB NVMe</td><td>4 TB</td></tr>
-<tr><td><strong>Linode</strong></td><td>Shared 1GB</td><td>$5</td><td>1</td><td>1 GB</td><td>25 GB</td><td>1 TB</td></tr>
-<tr><td><strong>DigitalOcean</strong></td><td>Basic Droplet</td><td>$6</td><td>1</td><td>1 GB</td><td>25 GB</td><td>1 TB</td></tr>
-<tr><td><strong>Hetzner</strong></td><td>CX32</td><td>&euro;6.80 (~$7.45)</td><td>4</td><td>8 GB</td><td>80 GB SSD</td><td>20 TB</td></tr>
+<tr><td><img src="https://www.google.com/s2/favicons?domain=lumadock.com&sz=32" alt="" class="provider-logo"><strong>LumaDock</strong></td><td>Basic</td><td>$1.99</td><td>1</td><td>1 GB</td><td>20 GB SSD</td><td>1 TB</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/vultr" alt="" class="provider-logo si-icon"><strong>Vultr</strong></td><td>Regular Cloud</td><td>$2.50</td><td>1</td><td>512 MB</td><td>10 GB</td><td>0.5 TB</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/hetzner" alt="" class="provider-logo si-icon"><strong>Hetzner</strong></td><td>CX22</td><td>&euro;3.79 (~$4.15)</td><td>2</td><td>4 GB</td><td>40 GB SSD</td><td>20 TB</td></tr>
+<tr><td><img src="https://www.google.com/s2/favicons?domain=contabo.com&sz=32" alt="" class="provider-logo"><strong>Contabo</strong></td><td>Cloud VPS S</td><td>$4.95</td><td>4</td><td>8 GB</td><td>50 GB SSD</td><td>Unlimited</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/hostinger" alt="" class="provider-logo si-icon"><strong>Hostinger</strong></td><td>KVM 1</td><td>$4.99</td><td>1</td><td>4 GB</td><td>50 GB NVMe</td><td>4 TB</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/linode" alt="" class="provider-logo si-icon"><strong>Linode</strong></td><td>Shared 1GB</td><td>$5</td><td>1</td><td>1 GB</td><td>25 GB</td><td>1 TB</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/digitalocean" alt="" class="provider-logo si-icon"><strong>DigitalOcean</strong></td><td>Basic Droplet</td><td>$6</td><td>1</td><td>1 GB</td><td>25 GB</td><td>1 TB</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/hetzner" alt="" class="provider-logo si-icon"><strong>Hetzner</strong></td><td>CX32</td><td>&euro;6.80 (~$7.45)</td><td>4</td><td>8 GB</td><td>80 GB SSD</td><td>20 TB</td></tr>
 </tbody></table></div>
 
 <h3>Serverless &amp; PaaS</h3>
 <div class="table-wrap"><table><thead><tr><th>Platform</th><th>Starting Price</th><th>Free Tier?</th><th>Auto-Scale</th><th>Notes</th></tr></thead><tbody>
-<tr><td><strong>Cloudflare Workers</strong></td><td>$5/mo</td><td>100K req/day</td><td>Yes</td><td>Moltworker PoC</td></tr>
-<tr><td><strong>Railway</strong></td><td>$5/mo</td><td>$5 credit</td><td>Yes</td><td>Best PaaS UX</td></tr>
-<tr><td><strong>Render</strong></td><td>$7/mo</td><td>Free w/ limits</td><td>Yes</td><td>YAML IaC</td></tr>
-<tr><td><strong>Fly.io</strong></td><td>Pay-as-you-go</td><td>None</td><td>Yes</td><td>Global edge</td></tr>
-<tr><td><strong>AWS Lightsail</strong></td><td>$3.50/mo</td><td>None</td><td>No</td><td>Simple AWS VPS</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/cloudflareworkers" alt="" class="provider-logo si-icon"><strong>Cloudflare Workers</strong></td><td>$5/mo</td><td>100K req/day</td><td>Yes</td><td>Moltworker PoC</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/railway" alt="" class="provider-logo si-icon"><strong>Railway</strong></td><td>$5/mo</td><td>$5 credit</td><td>Yes</td><td>Best PaaS UX</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/render" alt="" class="provider-logo si-icon"><strong>Render</strong></td><td>$7/mo</td><td>Free w/ limits</td><td>Yes</td><td>YAML IaC</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/flydotio" alt="" class="provider-logo si-icon"><strong>Fly.io</strong></td><td>Pay-as-you-go</td><td>None</td><td>Yes</td><td>Global edge</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/amazonaws" alt="" class="provider-logo si-icon"><strong>AWS Lightsail</strong></td><td>$3.50/mo</td><td>None</td><td>No</td><td>Simple AWS VPS</td></tr>
 </tbody></table></div>
 
 <h3>Managed Hosting Services</h3>
 <p>These providers handle ALL the setup for you &mdash; no Docker, no terminal, no DevOps required.</p>
 <div class="table-wrap"><table><thead><tr><th>Provider</th><th>Price/mo</th><th>Setup Time</th><th>What's Included</th></tr></thead><tbody>
-<tr><td><strong><a href="https://www.agent37.com/openclaw">Agent37</a></strong></td><td>$0.99-3.99</td><td>30 sec</td><td>Isolated instance, full UI, terminal, SSL</td></tr>
-<tr><td><strong><a href="https://myclaw.ai/pricing">MyClaw.ai</a></strong></td><td>$9 (was $29)</td><td>Instant</td><td>Auto-updates, backups, web terminal</td></tr>
-<tr><td><strong><a href="https://www.get-open-claw.com/">get-open-claw.com</a></strong></td><td>$9-49</td><td>&lt; 1 min</td><td>OpenClaw Secure, daily backups, health monitoring</td></tr>
-<tr><td><strong><a href="https://www.easyclaw.pro/en">EasyClaw</a></strong></td><td>$10+</td><td>60 sec</td><td>Multi-model, 3+ platforms, zero maintenance</td></tr>
-<tr><td><strong><a href="https://clawsimple.com/en">ClawSimple</a></strong></td><td>$8.25-29.08</td><td>2-3 min</td><td>Secure cloud, one-click updates</td></tr>
-<tr><td><strong><a href="https://xcloud.host/openclaw-hosting">xCloud</a></strong></td><td>$24</td><td>5 min</td><td>Telegram/WhatsApp pre-configured, encrypted backups</td></tr>
-<tr><td><strong><a href="https://www.clawcloud.sh/">ClawCloud</a></strong></td><td>$29-129</td><td>&lt; 1 min</td><td>All AI models (BYOK), auto-updates, daily backups</td></tr>
-<tr><td><strong><a href="https://kilo.ai/kiloclaw">Kilo Claw</a></strong></td><td>Pay-as-you-go</td><td>&lt; 60 sec</td><td>500+ models, 50+ platforms, SSO, audit logs</td></tr>
-<tr><td><strong><a href="https://contabo.com/en/openclaw-hosting/">Contabo OpenClaw</a></strong></td><td>$4.95+</td><td>Minutes</td><td>Unlimited workflows, full data ownership</td></tr>
+<tr><td><img src="https://www.google.com/s2/favicons?domain=agent37.com&sz=32" alt="" class="provider-logo"><strong><a href="https://www.agent37.com/openclaw">Agent37</a></strong></td><td>$0.99-3.99</td><td>30 sec</td><td>Isolated instance, full UI, terminal, SSL</td></tr>
+<tr><td><img src="https://www.google.com/s2/favicons?domain=myclaw.ai&sz=32" alt="" class="provider-logo"><strong><a href="https://myclaw.ai/pricing">MyClaw.ai</a></strong></td><td>$9 (was $29)</td><td>Instant</td><td>Auto-updates, backups, web terminal</td></tr>
+<tr><td><img src="https://www.google.com/s2/favicons?domain=get-open-claw.com&sz=32" alt="" class="provider-logo"><strong><a href="https://www.get-open-claw.com/">get-open-claw.com</a></strong></td><td>$9-49</td><td>&lt; 1 min</td><td>OpenClaw Secure, daily backups, health monitoring</td></tr>
+<tr><td><img src="https://www.google.com/s2/favicons?domain=easyclaw.pro&sz=32" alt="" class="provider-logo"><strong><a href="https://www.easyclaw.pro/en">EasyClaw</a></strong></td><td>$10+</td><td>60 sec</td><td>Multi-model, 3+ platforms, zero maintenance</td></tr>
+<tr><td><img src="https://www.google.com/s2/favicons?domain=clawsimple.com&sz=32" alt="" class="provider-logo"><strong><a href="https://clawsimple.com/en">ClawSimple</a></strong></td><td>$8.25-29.08</td><td>2-3 min</td><td>Secure cloud, one-click updates</td></tr>
+<tr><td><img src="https://www.google.com/s2/favicons?domain=xcloud.host&sz=32" alt="" class="provider-logo"><strong><a href="https://xcloud.host/openclaw-hosting">xCloud</a></strong></td><td>$24</td><td>5 min</td><td>Telegram/WhatsApp pre-configured, encrypted backups</td></tr>
+<tr><td><img src="https://www.google.com/s2/favicons?domain=clawcloud.sh&sz=32" alt="" class="provider-logo"><strong><a href="https://www.clawcloud.sh/">ClawCloud</a></strong></td><td>$29-129</td><td>&lt; 1 min</td><td>All AI models (BYOK), auto-updates, daily backups</td></tr>
+<tr><td><img src="https://www.google.com/s2/favicons?domain=kilo.ai&sz=32" alt="" class="provider-logo"><strong><a href="https://kilo.ai/kiloclaw">Kilo Claw</a></strong></td><td>Pay-as-you-go</td><td>&lt; 60 sec</td><td>500+ models, 50+ platforms, SSO, audit logs</td></tr>
+<tr><td><img src="https://www.google.com/s2/favicons?domain=contabo.com&sz=32" alt="" class="provider-logo"><strong><a href="https://contabo.com/en/openclaw-hosting/">Contabo OpenClaw</a></strong></td><td>$4.95+</td><td>Minutes</td><td>Unlimited workflows, full data ownership</td></tr>
 </tbody></table></div>
 
 <h3>Setup-as-a-Service (Freelancers)</h3>
@@ -412,15 +414,15 @@ cd openclaw
 <p>The <strong>real cost</strong> of running OpenClaw is the AI model API, not infrastructure.</p>
 <h3>Provider Pricing (per 1M tokens)</h3>
 <div class="table-wrap"><table><thead><tr><th>Provider</th><th>Model</th><th>Input Cost</th><th>Output Cost</th><th>Notes</th></tr></thead><tbody>
-<tr><td><strong>Anthropic</strong></td><td>Claude 3.5 Haiku</td><td>$0.80</td><td>$4.00</td><td>Best budget option</td></tr>
-<tr><td><strong>Anthropic</strong></td><td>Claude 3.5 Sonnet</td><td>$3.00</td><td>$15.00</td><td>Best balance</td></tr>
-<tr><td><strong>Anthropic</strong></td><td>Claude Opus 4.5</td><td>$15.00</td><td>$75.00</td><td>Most capable, expensive</td></tr>
-<tr><td><strong>OpenAI</strong></td><td>GPT-4o</td><td>$2.50</td><td>$10.00</td><td>Good alternative</td></tr>
-<tr><td><strong>OpenAI</strong></td><td>GPT-4o-mini</td><td>$0.15</td><td>$0.60</td><td>Very cheap</td></tr>
-<tr><td><strong>Google</strong></td><td>Gemini 2.0 Flash</td><td>$0.10</td><td>$0.40</td><td>Cheapest hosted</td></tr>
-<tr><td><strong>Google</strong></td><td>Gemini Flash-Lite</td><td><strong>Free</strong></td><td><strong>Free</strong></td><td>Zero cost option</td></tr>
-<tr><td><strong>DeepSeek</strong></td><td>DeepSeek V3</td><td>$0.27</td><td>$1.10</td><td>Best value reasoning</td></tr>
-<tr><td><strong>Ollama/Local</strong></td><td>Any</td><td><strong>$0</strong></td><td><strong>$0</strong></td><td>Requires 16 GB+ RAM</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/anthropic" alt="" class="provider-logo si-icon"><strong>Anthropic</strong></td><td>Claude 3.5 Haiku</td><td>$0.80</td><td>$4.00</td><td>Best budget option</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/anthropic" alt="" class="provider-logo si-icon"><strong>Anthropic</strong></td><td>Claude 3.5 Sonnet</td><td>$3.00</td><td>$15.00</td><td>Best balance</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/anthropic" alt="" class="provider-logo si-icon"><strong>Anthropic</strong></td><td>Claude Opus 4.5</td><td>$15.00</td><td>$75.00</td><td>Most capable, expensive</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/openai" alt="" class="provider-logo si-icon"><strong>OpenAI</strong></td><td>GPT-4o</td><td>$2.50</td><td>$10.00</td><td>Good alternative</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/openai" alt="" class="provider-logo si-icon"><strong>OpenAI</strong></td><td>GPT-4o-mini</td><td>$0.15</td><td>$0.60</td><td>Very cheap</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/google" alt="" class="provider-logo si-icon"><strong>Google</strong></td><td>Gemini 2.0 Flash</td><td>$0.10</td><td>$0.40</td><td>Cheapest hosted</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/google" alt="" class="provider-logo si-icon"><strong>Google</strong></td><td>Gemini Flash-Lite</td><td><strong>Free</strong></td><td><strong>Free</strong></td><td>Zero cost option</td></tr>
+<tr><td><img src="https://www.google.com/s2/favicons?domain=deepseek.com&sz=32" alt="" class="provider-logo"><strong>DeepSeek</strong></td><td>DeepSeek V3</td><td>$0.27</td><td>$1.10</td><td>Best value reasoning</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/ollama" alt="" class="provider-logo si-icon"><strong>Ollama/Local</strong></td><td>Any</td><td><strong>$0</strong></td><td><strong>$0</strong></td><td>Requires 16 GB+ RAM</td></tr>
 </tbody></table></div>
 <blockquote><p><strong>75x price difference</strong> between the most expensive (Claude Opus) and cheapest (Gemini Flash) options.</p></blockquote>
 <h3>Monthly API Cost Estimates</h3>
@@ -588,22 +590,22 @@ docker compose run --rm openclaw-cli security audit --deep</code></pre>
 <h2 id="configuration">Configuration</h2>
 <h3>Model Providers</h3>
 <div class="table-wrap"><table><thead><tr><th>Provider</th><th>Config Key</th><th>Free Tier?</th><th>Notes</th></tr></thead><tbody>
-<tr><td><strong>Anthropic</strong></td><td><code>ANTHROPIC_API_KEY</code></td><td>No</td><td>Primary, best quality</td></tr>
-<tr><td><strong>OpenAI</strong></td><td><code>OPENAI_API_KEY</code></td><td>No</td><td>GPT-4, GPT-4o</td></tr>
-<tr><td><strong>Google</strong></td><td><code>GOOGLE_API_KEY</code></td><td>Yes (Flash-Lite)</td><td>Cheapest hosted</td></tr>
-<tr><td><strong>OpenRouter</strong></td><td><code>OPENROUTER_API_KEY</code></td><td>No</td><td>200+ models unified API</td></tr>
-<tr><td><strong>DeepSeek</strong></td><td><code>DEEPSEEK_API_KEY</code></td><td>No</td><td>Excellent value</td></tr>
-<tr><td><strong>Ollama</strong></td><td>Local</td><td><strong>Free</strong></td><td>Requires local hardware</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/anthropic" alt="" class="provider-logo si-icon"><strong>Anthropic</strong></td><td><code>ANTHROPIC_API_KEY</code></td><td>No</td><td>Primary, best quality</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/openai" alt="" class="provider-logo si-icon"><strong>OpenAI</strong></td><td><code>OPENAI_API_KEY</code></td><td>No</td><td>GPT-4, GPT-4o</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/google" alt="" class="provider-logo si-icon"><strong>Google</strong></td><td><code>GOOGLE_API_KEY</code></td><td>Yes (Flash-Lite)</td><td>Cheapest hosted</td></tr>
+<tr><td><img src="https://www.google.com/s2/favicons?domain=openrouter.ai&sz=32" alt="" class="provider-logo"><strong>OpenRouter</strong></td><td><code>OPENROUTER_API_KEY</code></td><td>No</td><td>200+ models unified API</td></tr>
+<tr><td><img src="https://www.google.com/s2/favicons?domain=deepseek.com&sz=32" alt="" class="provider-logo"><strong>DeepSeek</strong></td><td><code>DEEPSEEK_API_KEY</code></td><td>No</td><td>Excellent value</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/ollama" alt="" class="provider-logo si-icon"><strong>Ollama</strong></td><td>Local</td><td><strong>Free</strong></td><td>Requires local hardware</td></tr>
 </tbody></table></div>
 <h3>Messaging Channels</h3>
 <div class="table-wrap"><table><thead><tr><th>Channel</th><th>Setup</th><th>Auth Method</th><th>Notes</th></tr></thead><tbody>
-<tr><td><strong>Telegram</strong></td><td>2 min</td><td>BotFather token</td><td>Fastest setup, supports Topics</td></tr>
-<tr><td><strong>WhatsApp</strong></td><td>2 min</td><td>QR code scan</td><td>Separate phone recommended</td></tr>
-<tr><td><strong>Discord</strong></td><td>5 min</td><td>Bot application</td><td>Developer portal required</td></tr>
-<tr><td><strong>Slack</strong></td><td>5 min</td><td>Bot token</td><td>Socket or HTTP mode</td></tr>
-<tr><td><strong>Signal</strong></td><td>5 min</td><td>Direct integration</td><td>Privacy-focused</td></tr>
-<tr><td><strong>iMessage</strong></td><td>10 min</td><td>BlueBubbles bridge</td><td>macOS only</td></tr>
-<tr><td><strong>Microsoft Teams</strong></td><td>5 min</td><td>Enterprise integration</td><td>Business users</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/telegram" alt="" class="provider-logo si-icon"><strong>Telegram</strong></td><td>2 min</td><td>BotFather token</td><td>Fastest setup, supports Topics</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/whatsapp" alt="" class="provider-logo si-icon"><strong>WhatsApp</strong></td><td>2 min</td><td>QR code scan</td><td>Separate phone recommended</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/discord" alt="" class="provider-logo si-icon"><strong>Discord</strong></td><td>5 min</td><td>Bot application</td><td>Developer portal required</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/slack" alt="" class="provider-logo si-icon"><strong>Slack</strong></td><td>5 min</td><td>Bot token</td><td>Socket or HTTP mode</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/signal" alt="" class="provider-logo si-icon"><strong>Signal</strong></td><td>5 min</td><td>Direct integration</td><td>Privacy-focused</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/apple" alt="" class="provider-logo si-icon"><strong>iMessage</strong></td><td>10 min</td><td>BlueBubbles bridge</td><td>macOS only</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/microsoftteams" alt="" class="provider-logo si-icon"><strong>Microsoft Teams</strong></td><td>5 min</td><td>Enterprise integration</td><td>Business users</td></tr>
 </tbody></table></div>
 <h3>Local LLM Integration</h3>
 <h4>Ollama</h4>
@@ -681,13 +683,13 @@ ollama pull llama3.1</code></pre>
 <div class="section" id="section-alternatives">
 <h2 id="alternatives--competitors">Alternatives &amp; Competitors</h2>
 <div class="table-wrap"><table><thead><tr><th>Alternative</th><th>Type</th><th>Best For</th><th>Key Advantage</th></tr></thead><tbody>
-<tr><td><strong>Nanobot</strong></td><td>Lightweight</td><td>Minimalists</td><td>99% smaller codebase</td></tr>
-<tr><td><strong>NanoClaw</strong></td><td>Security-first</td><td>Security-conscious</td><td>Isolated containers</td></tr>
-<tr><td><strong>Jan.ai</strong></td><td>Offline chat</td><td>Privacy absolutists</td><td>100% offline</td></tr>
-<tr><td><strong>AnythingLLM</strong></td><td>Doc-to-chatbot</td><td>Knowledge bases</td><td>Turn PDFs into chatbots</td></tr>
-<tr><td><strong>Claude Code</strong></td><td>Coding agent</td><td>Developers</td><td>Best coding assistant</td></tr>
-<tr><td><strong>Dify</strong></td><td>LLM app platform</td><td>Agents, RAG, MLOps</td><td>Best debugging, workflow viz</td></tr>
-<tr><td><strong>n8n</strong></td><td>Workflow automation</td><td>Business processes</td><td>Visual workflow builder</td></tr>
+<tr><td><img src="https://www.google.com/s2/favicons?domain=github.com/nanobot-ai&sz=32" alt="" class="provider-logo"><strong>Nanobot</strong></td><td>Lightweight</td><td>Minimalists</td><td>99% smaller codebase</td></tr>
+<tr><td><img src="https://www.google.com/s2/favicons?domain=github.com&sz=32" alt="" class="provider-logo"><strong>NanoClaw</strong></td><td>Security-first</td><td>Security-conscious</td><td>Isolated containers</td></tr>
+<tr><td><img src="https://www.google.com/s2/favicons?domain=jan.ai&sz=32" alt="" class="provider-logo"><strong>Jan.ai</strong></td><td>Offline chat</td><td>Privacy absolutists</td><td>100% offline</td></tr>
+<tr><td><img src="https://www.google.com/s2/favicons?domain=anythingllm.com&sz=32" alt="" class="provider-logo"><strong>AnythingLLM</strong></td><td>Doc-to-chatbot</td><td>Knowledge bases</td><td>Turn PDFs into chatbots</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/anthropic" alt="" class="provider-logo si-icon"><strong>Claude Code</strong></td><td>Coding agent</td><td>Developers</td><td>Best coding assistant</td></tr>
+<tr><td><img src="https://www.google.com/s2/favicons?domain=dify.ai&sz=32" alt="" class="provider-logo"><strong>Dify</strong></td><td>LLM app platform</td><td>Agents, RAG, MLOps</td><td>Best debugging, workflow viz</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/n8n" alt="" class="provider-logo si-icon"><strong>n8n</strong></td><td>Workflow automation</td><td>Business processes</td><td>Visual workflow builder</td></tr>
 </tbody></table></div>
 </div>
 
@@ -820,11 +822,11 @@ ollama pull llama3.1</code></pre>
 <div class="section" id="section-courses">
 <h2 id="courses--learning-platforms">Courses &amp; Learning Platforms</h2>
 <div class="table-wrap"><table><thead><tr><th>Platform</th><th>Cost</th><th>Description</th></tr></thead><tbody>
-<tr><td><strong><a href="https://openclaw.academy/">OpenClaw Academy</a></strong></td><td><strong>Free</strong></td><td>All courses free, no signup, interactive quizzes</td></tr>
-<tr><td><strong><a href="https://www.freecodecamp.org/news/openclaw-full-tutorial-for-beginners/">freeCodeCamp</a></strong></td><td><strong>Free</strong></td><td>Comprehensive 1-hour course</td></tr>
-<tr><td><strong><a href="https://www.codecademy.com/article/open-claw-tutorial-installation-to-first-chat-setup">Codecademy</a></strong></td><td><strong>Free</strong></td><td>20-minute install guide</td></tr>
-<tr><td><strong><a href="https://github.com/kiankyars/openclawcourse">GitHub Course</a></strong></td><td><strong>Free</strong></td><td>1-hour crash course</td></tr>
-<tr><td><strong><a href="https://www.udemy.com/course/openclaw/">Udemy</a></strong></td><td>Paid</td><td>Azure Linux VM deployment</td></tr>
+<tr><td><img src="https://www.google.com/s2/favicons?domain=openclaw.academy&sz=32" alt="" class="provider-logo"><strong><a href="https://openclaw.academy/">OpenClaw Academy</a></strong></td><td><strong>Free</strong></td><td>All courses free, no signup, interactive quizzes</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/freecodecamp" alt="" class="provider-logo si-icon"><strong><a href="https://www.freecodecamp.org/news/openclaw-full-tutorial-for-beginners/">freeCodeCamp</a></strong></td><td><strong>Free</strong></td><td>Comprehensive 1-hour course</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/codecademy" alt="" class="provider-logo si-icon"><strong><a href="https://www.codecademy.com/article/open-claw-tutorial-installation-to-first-chat-setup">Codecademy</a></strong></td><td><strong>Free</strong></td><td>20-minute install guide</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/github" alt="" class="provider-logo si-icon"><strong><a href="https://github.com/kiankyars/openclawcourse">GitHub Course</a></strong></td><td><strong>Free</strong></td><td>1-hour crash course</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/udemy" alt="" class="provider-logo si-icon"><strong><a href="https://www.udemy.com/course/openclaw/">Udemy</a></strong></td><td>Paid</td><td>Azure Linux VM deployment</td></tr>
 </tbody></table></div>
 </div>
 
@@ -832,11 +834,11 @@ ollama pull llama3.1</code></pre>
 <div class="section" id="section-community">
 <h2 id="community">Community</h2>
 <div class="table-wrap"><table><thead><tr><th>Platform</th><th>URL</th><th>Members</th><th>Best For</th></tr></thead><tbody>
-<tr><td><strong>Discord</strong></td><td><a href="https://docs.openclaw.ai/channels/discord">OpenClaw Discord</a></td><td>8,000+</td><td>Quick questions, troubleshooting</td></tr>
-<tr><td><strong>Discourse (CoClaw)</strong></td><td><a href="https://coclaw.com/">coclaw.com</a></td><td>15,000+</td><td>Long-form discussion, bug reports</td></tr>
-<tr><td><strong>X/Twitter Community</strong></td><td><a href="https://x.com/i/communities/2013441068562325602">OpenClaw Community</a></td><td>12,200+</td><td>News, updates, demos</td></tr>
-<tr><td><strong>GitHub Issues</strong></td><td><a href="https://github.com/openclaw/openclaw/issues">openclaw/openclaw/issues</a></td><td>N/A</td><td>Bug reports, feature requests</td></tr>
-<tr><td><strong>GitHub Discussions</strong></td><td><a href="https://github.com/openclaw/openclaw/discussions">openclaw/openclaw/discussions</a></td><td>N/A</td><td>Q&amp;A, show-and-tell</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/discord" alt="" class="provider-logo si-icon"><strong>Discord</strong></td><td><a href="https://docs.openclaw.ai/channels/discord">OpenClaw Discord</a></td><td>8,000+</td><td>Quick questions, troubleshooting</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/discourse" alt="" class="provider-logo si-icon"><strong>Discourse (CoClaw)</strong></td><td><a href="https://coclaw.com/">coclaw.com</a></td><td>15,000+</td><td>Long-form discussion, bug reports</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/x" alt="" class="provider-logo si-icon"><strong>X/Twitter Community</strong></td><td><a href="https://x.com/i/communities/2013441068562325602">OpenClaw Community</a></td><td>12,200+</td><td>News, updates, demos</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/github" alt="" class="provider-logo si-icon"><strong>GitHub Issues</strong></td><td><a href="https://github.com/openclaw/openclaw/issues">openclaw/openclaw/issues</a></td><td>N/A</td><td>Bug reports, feature requests</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/github" alt="" class="provider-logo si-icon"><strong>GitHub Discussions</strong></td><td><a href="https://github.com/openclaw/openclaw/discussions">openclaw/openclaw/discussions</a></td><td>N/A</td><td>Q&amp;A, show-and-tell</td></tr>
 </tbody></table></div>
 </div>
 
@@ -956,9 +958,9 @@ node --version                     # Must be 22+</code></pre>
 <div class="section" id="section-china">
 <h2 id="china--global-adoption">China &amp; Global Adoption</h2>
 <div class="table-wrap"><table><thead><tr><th>Company</th><th>Integration</th><th>Details</th></tr></thead><tbody>
-<tr><td><strong>Alibaba Cloud</strong></td><td>Simple Application Server</td><td>19 regions, from $4/mo</td></tr>
-<tr><td><strong>Tencent Cloud</strong></td><td>Lighthouse Service</td><td>One-click install</td></tr>
-<tr><td><strong>ByteDance</strong></td><td>Volcano Engine</td><td>Cloud hosting support</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/alibabacloud" alt="" class="provider-logo si-icon"><strong>Alibaba Cloud</strong></td><td>Simple Application Server</td><td>19 regions, from $4/mo</td></tr>
+<tr><td><img src="https://cdn.simpleicons.org/tencentqq" alt="" class="provider-logo si-icon"><strong>Tencent Cloud</strong></td><td>Lighthouse Service</td><td>One-click install</td></tr>
+<tr><td><img src="https://www.google.com/s2/favicons?domain=bytedance.com&sz=32" alt="" class="provider-logo"><strong>ByteDance</strong></td><td>Volcano Engine</td><td>Cloud hosting support</td></tr>
 </tbody></table></div>
 <p>v2026.2.2 added native <strong>Feishu</strong> and <strong>Lark</strong> support &mdash; first official Chinese chat client integration.</p>
 </div>
