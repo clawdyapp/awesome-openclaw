@@ -193,6 +193,8 @@ That's it. The wizard walks you through API key setup, channel configuration, an
 | **[Raspberry Pi](https://docs.openclaw.ai/raspberry-pi)** | 10 min | Medium | Low-power, always-on |
 | **[ESP32-S3 (MimiClaw)](https://github.com/memovai/mimiclaw)** | 10 min | Medium | Cheapest hardware ($5), pure C, no OS |
 | **[PicoClaw (RISC-V)](https://github.com/sipeed/picoclaw)** | 5 min | Easy | Single Go binary, 10 MB RAM, $10 RISC-V board |
+| **[ZeroClaw (Rust)](https://github.com/theonlyhennygod/zeroclaw)** | 2 min | Easy | 3.4 MB binary, <10ms startup, 22+ providers |
+| **[TinyClaw (Shell)](https://github.com/jlia0/tinyclaw)** | 5 min | Easy | 400 LoC, Claude Code + tmux, self-healing |
 
 ### Method 1: Official Installer Script
 
@@ -358,6 +360,8 @@ Hire someone to set it up for you.
 | [Raspberry Pi 5](https://docs.openclaw.ai/raspberry-pi) | **$0**/mo | 30 min | Medium | No | Low-power, always-on |
 | [ESP32-S3 (MimiClaw)](https://github.com/memovai/mimiclaw) | **$0**/mo | 10 min | Medium | No | Cheapest ($5 chip), no OS |
 | [PicoClaw (RISC-V)](https://github.com/sipeed/picoclaw) | **$0**/mo | 5 min | Easy | No | $10 hardware, 10 MB RAM, Go binary |
+| [ZeroClaw (Rust)](https://github.com/theonlyhennygod/zeroclaw) | **$0**/mo | 2 min | Easy | No | 3.4 MB binary, Rust, <10ms startup |
+| [TinyClaw (Shell)](https://github.com/jlia0/tinyclaw) | **$0**/mo | 5 min | Easy | No | 400 LoC, Claude Code + tmux |
 | Mac Mini | **$0**/mo | 10 min | Easy | No | Privacy-first, local |
 
 ---
@@ -932,7 +936,10 @@ tar -czvf ~/openclaw_backup_$(date +%Y%m%d).tar.gz -C "$HOME" .openclaw
 | **n8n** | Workflow automation | Business processes | Visual workflow builder |
 | **LangBot** | Multi-platform bots | IM integration | [GitHub](https://github.com/langbot-app/LangBot) |
 | [**LobsterX**](https://github.com/AstraBert/workflows-acp/blob/main/packages/lobsterx) | Document-related OpenClaw-like agent | Document workflows | Self-hostable (Docker, uv tool), Telegram bot support, lightweight codebase (2-3K LoC) |
-| [**IronClaw**](https://github.com/nearai/ironclaw) | Rust rewrite | Privacy & security | OpenClaw-inspired, built by NEAR AI, Rust-native |
+| [**IronClaw**](https://github.com/nearai/ironclaw) | Rust rewrite | Privacy & security | OpenClaw-inspired, built by NEAR AI, Rust-native (1.3K stars) |
+| [**ZeroClaw**](https://github.com/theonlyhennygod/zeroclaw) | Rust ultra-fast | Speed-first users | 3.4 MB binary, <10ms startup, 22+ providers, swappable Rust traits, hybrid SQLite memory |
+| [**TinyClaw**](https://github.com/jlia0/tinyclaw) | Shell script (400 LoC) | Stability-first | Claude Code + tmux, WhatsApp, heartbeat, cron, self-healing (1.3K stars) |
+| [**Mini-Claw**](https://github.com/htlin222/mini-claw) | Minimalist | Subscription users | Uses Claude Pro/Max or ChatGPT Plus directly in Telegram, zero API cost |
 | [**Ralv**](https://ralv.ai/) | 3D agent orchestration | Multi-agent management | StarCraft-like spatial UI for commanding 100+ agents |
 | [**GitClaw**](https://github.com/SawyerHood/gitclaw) | GitHub Actions agent | Serverless | Zero-infra OpenClaw via GitHub Issues & Actions |
 | [**BankrBot Skills**](https://github.com/BankrBot/openclaw-skills) | DeFi/crypto agent | Web3 traders | Polymarket, token trading, NFTs, on-chain messaging |
@@ -1134,6 +1141,8 @@ Capabilities: CDP, ARIA snapshots, screenshots, tab management, click/type/drag,
 - [Tailscale VPN Setup](https://dev.to/nunc/self-hosting-openclaw-ai-assistant-on-a-vps-with-tailscale-vpn-zero-public-ports-35fn)
 - [Custom Skill Creation](https://zenvanriel.nl/ai-engineer-blog/openclaw-custom-skill-creation-guide/)
 - [OpenRouter Integration](https://openrouter.ai/docs/guides/guides/openclaw-integration) | [DeepSeek via OpenRouter](https://medium.com/@oo.kaymolly/connect-deepseek-to-openclaw-via-openrouter-7eb19ef61a84)
+- [Kimi K2.5 + OpenClaw Guide](https://medium.com/coding-nexus/how-to-connect-kimi-k2-5-to-openclaw-clawdbot-bf7ed5a31743) | [Kimi K2.5 Free Setup](https://apidog.com/blog/how-to-use-kimi-k2-5-for-free-with-openclaw/) | [Moonshot Official Docs](https://platform.moonshot.ai/docs/guide/use-kimi-in-openclaw)
+- [Kimi K2.5 on Baseten](https://www.baseten.co/blog/openclaw-kimi-k2-5-on-baseten-frontier-agent-performance-with-oss/) | [Kimi on Fireworks AI](https://fireworks.ai/blog/openclaw-using-kimi2p5-on-fireworks-ai)
 - [50+ Official Extensions Guide](https://help.apiyi.com/en/openclaw-extensions-ecosystem-guide-en.html)
 
 ### Security Guides
@@ -1407,6 +1416,9 @@ node --version                     # Must be 22+
 | [willbullen/openclaw-docker](https://github.com/willbullen/openclaw-docker) | Security-hardened Docker Compose — non-root, dropped caps, read-only rootfs, MCP isolation |
 | [coollabsio/openclaw](https://github.com/coollabsio/openclaw) | Auto-built Docker images by CoolLabs — multi-arch, nginx + basic auth, 6-hour rebuild cycle |
 | [hesamsheikh/awesome-openclaw-usecases](https://github.com/hesamsheikh/awesome-openclaw-usecases) | Real-life OpenClaw use cases — Reddit digests, X analysis, YouTube summaries, multi-agent coordination |
+| [theonlyhennygod/zeroclaw](https://github.com/theonlyhennygod/zeroclaw) | ZeroClaw — pure Rust, 3.4 MB binary, <10ms startup, 22+ providers, swappable trait-based architecture |
+| [jlia0/tinyclaw](https://github.com/jlia0/tinyclaw) | TinyClaw — OpenClaw in ~400 lines of shell script, Claude Code + tmux, self-healing, WhatsApp (1.3K stars) |
+| [htlin222/mini-claw](https://github.com/htlin222/mini-claw) | Mini-Claw — minimalist OpenClaw alternative using Claude Pro/Max or ChatGPT Plus directly in Telegram |
 
 ---
 
